@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <!-- Bootstrap link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- custom style sheet -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container-fluid col-8">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+  </div>
+  <div class="container-fluid col-8"> 
+    <div id="white" class="jumbotron">
+        <h2>Latest Mars News:</h2>
+        <h3>{{ Latest_News_Title }}</h3>
+        <h4>{{ Latest_News_Paragraph }}</h4>
+    </div>
+  </div>  
+  <div class="container-fluid col-8">
+    <div id="white" class="jumbotron">
+      <div id="NoPad" class="col-8 leftfloat">
+        <h2>Featured Mars Image:</h2>
+        <img href="{{ featured_image_url }}" alt="Featured Mars Image">
+      </div>
+      <div id="border" class="col-4 leftfloat">
+        <h3>Current Weather on Mars</h3>
+        <h4>{{ mars_weather }}</h4>
+      </div>
+      <br>
+      <br>
+      <div class="col-4 leftfloat">
+        <h3>Mars Facts</h3>
+        <h4>{{ facts_table }}</h4>
+      </div>
+    </div>              
+  </div>  
+</body>
+</html>
