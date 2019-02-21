@@ -25,27 +25,44 @@
   <div class="container-fluid col-8"> 
     <div id="white" class="jumbotron">
         <h2>Latest Mars News:</h2>
-        <h3>{{ Latest_News_Title }}</h3>
-        <h4>{{ Latest_News_Paragraph }}</h4>
+        <h3>{{ mars.Latest_News_Title }}</h3>
+        <h4>{{ mars.Latest_News_Paragraph }}</h4>
     </div>
   </div>  
   <div class="container-fluid col-8">
     <div id="white" class="jumbotron">
       <div id="NoPad" class="col-8 leftfloat">
         <h2>Featured Mars Image:</h2>
-        <img href="{{ featured_image_url }}" alt="Featured Mars Image">
+        <img src="{{ mars.featured_image_url }}" alt="Featured Mars Image">
       </div>
       <div id="border" class="col-4 leftfloat">
         <h3>Current Weather on Mars</h3>
-        <h4>{{ mars_weather }}</h4>
+        <h4>{{ mars.weather }}</h4>
       </div>
       <br>
       <br>
-      <div class="col-4 leftfloat">
+      <div id="NoPad" class="col-4 leftfloat">
         <h3>Mars Facts</h3>
-        <h4>{{ facts_table }}</h4>
+        <h4>{{ mars.Facts }}</h4>
+        <br>
       </div>
-    </div>              
-  </div>  
+    </div>
+  </div>    
+  <div class="container-fluid col-8">
+    <div id="white" class="jumbotron text-center">
+      <h3>Mars Hemispheres</h3>
+        <ul style="list-style: none;">
+          <li>Cerberus</li>
+          <img src="{{ mars.Cerberus_image_url }}" alt="Cerberus">
+          <li>Schiaparelli</li>
+          <img src="{{ mars.Schiaparelli_image_url }}" alt="Schiaparelli">
+          <li>Syrtis</li>
+          <img src="{{ mars.Syrtis_image_url }}" alt="Syrtis">
+          <li>Valles Marineris</li>
+          <img src="{{ mars.Valles_marineris_image_url }}" alt="Valles Marineris">
+        </ul>    
+    </div>
+  </div>              
+</div>  
 </body>
 </html>
