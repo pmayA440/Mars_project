@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px 100px 10px 100px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.center{
+  text-align: center;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Equal column */
+.equalcolumn {
+  float: left;
+  width: 50%;
+  background-color: #f1f1f1;
+  padding: 10px;
+  
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Mission to Mars</h1>
+  <p><a href="/scrape" role="button">Scrape New Data</a></p>
+</div>
+
+<div class="row">
+  <div class="card">
+    <h2>Lastest Mars News</h2>
+    <h3>{{ mars.Latest_News_Title }}</h3>
+    <p>{{ mars.Latest_News_Paragraph }}</p>
+  </div>    
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Featured Mars Image</h2>
+      <img src="{{ mars.featured_image_url }}" alt="Featured Mars Image" style="width: 100%";>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Current Weather on Mars</h2>
+      <p>{{ mars.weather }}</p>
+    </div>
+    <div class="card">
+      <h3>Mars Facts</h3>
+      <table border=".5" class="dataframe">
+          <thead>
+            <tr style="text-align: right;">
+              <th></th>
+              <th>1</th>
+            </tr>
+            <tr>
+              <th>0</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Equatorial Diameter:</th>
+              <td>6,792 km</td>
+            </tr>
+            <tr>
+              <th>Polar Diameter:</th>
+              <td>6,752 km</td>
+            </tr>
+            <tr>
+              <th>Mass:</th>
+              <td>6.42 x 10^23 kg (10.7% Earth)</td>
+            </tr>
+            <tr>
+              <th>Moons:</th>
+              <td>2 (Phobos &amp; Deimos)</td>
+            </tr>
+            <tr>
+              <th>Orbit Distance:</th>
+              <td>227,943,824 km (1.52 AU)</td>
+            </tr>
+            <tr>
+              <th>Orbit Period:</th>
+              <td>687 days (1.9 years)</td>
+            </tr>
+            <tr>
+              <th>Surface Temperature:</th>
+              <td>-153 to 20 °C</td>
+            </tr>
+            <tr>
+              <th>First Record:</th>
+              <td>2nd millennium BC</td>
+            </tr>
+            <tr>
+              <th>Recorded By:</th>
+              <td>Egyptian astronomers</td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+    </div>    
+</div>
+<div class="row">
+    <div class="card">
+      <h2 class="center">Mars Hemispheres</h2>
+        <img class="equalcolumn" src="{{ mars.Cerberus_image_url }}" alt="Cerberus" style="width: 50%";>
+        <img class="equalcolumn" src="{{ mars.Schiaparelli_image_url }}" alt="Schiaparelli" style="width: 50%";>
+        <h2 class="center equalcolumn">Cerberus</h2>
+        <h2 class="center equalcolumn">Schiaparelli</h2>
+        <img class="equalcolumn" src="{{ mars.Syrtis_image_url }}" alt="Syrtis" style="width: 50%">
+        <img class="equalcolumn" src="{{ mars.Valles_marineris_image_url }}" alt="Valles Marineris" style="width: 50%";>
+        <h2 class="center equalcolumn">Syrtis</h2>
+        <h2 class="center equalcolumn">Valles Marineris</h2>       
+    </div>
+</div>  
+</body>
+</html>
