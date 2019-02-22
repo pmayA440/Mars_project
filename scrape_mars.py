@@ -70,8 +70,8 @@ def scrape():
 
     mars['Cerberus_image_url'] = Mars_Hemispheres[0]
     mars['Schiaparelli_image_url'] = Mars_Hemispheres[1]
-    mars['Syrtis_image_url'] = 
-    mars['Valles_marineris_image_url'] = 
+    mars['Syrtis_image_url'] = Mars_Hemispheres[2]
+    mars['Valles_marineris_image_url'] = Mars_Hemispheres[3]
     
 
     # Return results
